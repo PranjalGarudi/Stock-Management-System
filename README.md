@@ -44,3 +44,5 @@ Order management · Search · Filtering · Pagination · Reports (via dashboard 
 ## Notes
 - Register the first user via `POST /api/auth/register` with `role: "admin"` to bootstrap access — there's no public signup page by design (admin creates other accounts, or open the endpoint temporarily for setup).
 - No TypeScript, no EJS, no Next.js API routes — Next.js is a pure frontend that talks to Express over REST via `services/api.js`.
+
+##IN PROGRESS
