@@ -1,0 +1,14 @@
+import mongoose from "mongoose";
+
+const inventorySchema = new mongoose.Schema(
+  {
+    product: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true, unique: true },
+    quantity: { type: Number, required: true, default: 0, min: 0 },
+    location: { type: String, default: "Main Warehouse" },
+    lastRestockedAt: { type: Date },
+    updatedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Inventory", inventorySchema);
